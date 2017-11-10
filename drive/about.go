@@ -26,8 +26,8 @@ func (self *Drive) About(args AboutArgs) (err error) {
 	fmt.Fprintf(args.Out, "Free: %s\n", formatSize(quota.Limit-quota.Usage, args.SizeInBytes))
 	fmt.Fprintf(args.Out, "Total: %s\n", formatSize(quota.Limit, args.SizeInBytes))
 	} else {
- +		fmt.Println("Total: Unlimited")
- +	}
+		fmt.Println("Total: Unlimited")
+	}
 	fmt.Fprintf(args.Out, "Max upload size: %s\n", formatSize(about.MaxUploadSize, args.SizeInBytes))
 	return
 }
